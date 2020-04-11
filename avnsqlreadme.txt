@@ -19,6 +19,6 @@ INSERT INTO public.avn(cont) VALUES ('9884570793') RETURNING *;
 INSERT INTO public.avn(datee) VALUES ('20/03/2017') RETURNING *;
 INSERT INTO public.avn(statuss) VALUES ('NEW') RETURNING *;
 
-delete FROM public.avn;
+delete FROM public.avn;   
 
 username
