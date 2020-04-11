@@ -8,12 +8,12 @@ node {
  rtMaven.tool = "maven"
 
     stage('Clone sources') {
-        git url: 'https://github.com/sukumartcs/Webapp.git'
+        git url: 'https://github.com/d-dineshbabu/Webapp.git'
     }
     
 	stage("build & SonarQube analysis") {     
               withSonarQubeEnv('sonarqube_Demo') {      
-		buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean sonar:sonar -Dsonar.host.url=http://18.189.27.66:9000 -Dsonar.login=admin -Dsonar.password=admin -Dsonar.inclusions=**/*.java -Dsonar.exclusions=src/test/java/servlet/*.java'
+		buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean sonar:sonar -Dsonar.host.url=http://18.191.159:9000 -Dsonar.login=admin -Dsonar.password=admin -Dsonar.inclusions=**/*.java -Dsonar.exclusions=src/test/java/servlet/*.java'
 	      }
           }
 		  
