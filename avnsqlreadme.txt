@@ -8,7 +8,7 @@ ALTER TABLE public.avn ADD COLUMN tnum bigint default nextval('ticket_sequence':
 ALTER TABLE avn ADD COLUMN statuss  varchar(100);
 
 CREATE TABLE public.avn(
-  tnum bigint default nextval('ticket_sequence'::regclass),
+  tnum bigint default nextval('ticket_sequence'::regclass),    
   other_column TEXT
 );
 
