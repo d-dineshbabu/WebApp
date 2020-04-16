@@ -18,7 +18,7 @@ node {
           }
 		  
 	stage('Maven build') {
-        buildInfo = rtMaven.run pom: 'pom.xml', goals: 'package -DskipTests'
+        buildInfo = rtMaven.run pom: 'pom.xml', goals: 'package -DskipTests'  
     }
 
     stage('Artifactory configuration') {
